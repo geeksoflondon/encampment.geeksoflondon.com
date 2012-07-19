@@ -1,0 +1,12 @@
+<%# body_classes << 'other_class_name' %>
+<% content_for :title do %>
+	<%= "#{CONFIG['blog']['title']} | " unless root? %>
+<% end %>
+
+<section>
+	<%= render :partial => @posts, :locals => {:show_nav => true, :highlight_unpublished => true} %>
+	
+	<%= will_paginate @posts %>
+	
+
+</section>

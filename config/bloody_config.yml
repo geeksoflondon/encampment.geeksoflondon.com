@@ -1,0 +1,36 @@
+title: "Encampment London 2011"
+header: "encampment.png"
+
+sidebar2:
+  blocks:
+    title:             '<h2>our sponsors</h2>'
+    theiw:             '<a href="http://theiw.org"><img src="/sponsors/theiw_small.png" /></a>'
+    eventbrite:        '<a href="http://eventbrite.com"><img src="/sponsors/eventbrite_small.png" /></a>'
+    lanyrd:            '<a href="http://lanyrd.com"><img src="/sponsors/lanyrd_small.png" /></a>'
+    mozilla:           '<a href="http://mozilla.org"><img src="/sponsors/mozilla_small.png" /></a>'
+    
+home:
+  enabled: true         # wether to show the sidebar home module
+  in_nav: true          # wether to actually show it in the sidebar
+  sidebar_title: "home" # the title for in the sidebar
+
+blog:
+  enabled: true         #toggles wether this feature is enabled
+  in_nav: true          #toggles wether this feature is shown in the sidebar
+  title: "News"         #the title for this section
+  sidebar_title: "news" #the title for the sidebar
+  path: "news"          #the path used in the url (e.g. http://example.com/your_path/post_name)
+  show_recent: 2        #wether or not to show the recent blogs entries on the frontpage
+  
+pages:
+  enabled: true         #toggles wether this feature is enabled
+  in_nav: true          #toggles wether this feature is shown in the sidebar
+  root_page: "home"    #the root page to show instead of the blog
+  
+twitter:
+  consumer_key: 'vBFoHZXQ74whFF74n8IA'
+  consumer_secret: 'CVnKrqLcWoFVN8fktDQoWGQKCIGUSI9kXH44QCxinY'
+  
+footer:
+  text: "| Encampment is a <a href='http://geeksoflondon.com'>Geeks of London</a> event"
+    

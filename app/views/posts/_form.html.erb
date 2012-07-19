@@ -1,0 +1,38 @@
+<%= form_for(@post) do |f| %>
+  <% if @post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+      <% @post.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.text_field :title, :placeholder => "Title" %>
+  </div>
+	<hr/>
+	<%= render :partial => 'markdown_info' %>
+  <div class="field">
+    <%= f.text_area :content, :placeholder => 'Content' %>
+  </div>
+  <div class="controls">
+	  <%= link_to '&larr;	Back'.html_safe, @post, :class => "button medium white left" %>
+	  <%= link_to 'Delete', @post, confirm: 'Are you sure?', method: :delete, :class => 'button gray medium left' %>
+
+		<% if @post.new_record? %>
+			<%= f.submit(:class => 'button medium green', :value => 'Save post') %>
+			<%= f.submit(:class => 'button medium orange', :value => 'Publish') %>
+		<% elsif !@post.published? %>
+			<%= f.submit(:class => 'button medium green', :value => 'Update post') %>
+			<%= f.submit(:class => 'button medium orange', :value => 'Publish') %>
+		<% else %>
+			<%= f.submit(:class => 'button medium orange', :value => 'Unpublish') %>
+			<%= f.submit(:class => 'button medium green', :value => 'Update post') %>
+		<% end %>
+
+  </div>
+<% end %>

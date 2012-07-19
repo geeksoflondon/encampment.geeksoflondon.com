@@ -1,0 +1,21 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&v2);
+
+
+body {
+	font-family: 'Lato', sans-serif;
+}
+	
+a {
+	color: #ED1C24;
+}
+
+aside {
+	a {
+		color: #000;
+		font-size: 15px;
+		
+		&.active {
+			color: #ED1C24;
+		}
+	}
+}
